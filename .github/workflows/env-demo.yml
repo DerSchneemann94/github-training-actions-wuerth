@@ -1,0 +1,19 @@
+name: Env Demo
+
+on: [workflow_dispatch]
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Deploy"
+      - run: echo "${{ secrets.MY_REPO_SECRET }}"
+      - run: echo "${{ vars.MY_REPO_VAR }}"
+  
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    environment: Demo
+    steps:
+      - run: echo "Deploy"
