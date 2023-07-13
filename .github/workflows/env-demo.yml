@@ -15,6 +15,7 @@ jobs:
       - run: echo "${{ vars.MY_REPO_VAR }}"
       - run: echo "${{ vars.VAR_1 }}"
       - run: echo "${{ env.SOME_ENV_SETTING }}"
+      - run: docker login
   
   deploy:
     name: Deploy
