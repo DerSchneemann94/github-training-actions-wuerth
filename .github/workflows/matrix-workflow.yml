@@ -1,0 +1,12 @@
+name: Matrix Workflow
+
+on: [workflow_dispatch]
+
+jobs:
+  matrix-demo:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        timeout: [10, 100]
+    steps:
+      - run: echo "Timeout (ms) ${{ matrix.timeout }}"
