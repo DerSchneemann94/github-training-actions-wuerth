@@ -8,5 +8,7 @@ jobs:
     strategy:
       matrix:
         timeout: [10, 100]
+        response: [1000, 10000]
     steps:
       - run: echo "Timeout (ms) ${{ matrix.timeout }}"
+      - run: echo "Response (ms) ${{ matrix.response }}"
